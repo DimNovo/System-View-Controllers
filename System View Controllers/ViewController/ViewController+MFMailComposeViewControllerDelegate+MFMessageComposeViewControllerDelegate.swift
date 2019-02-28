@@ -16,6 +16,7 @@ extension ViewController: MFMailComposeViewControllerDelegate {
 }
 
 extension ViewController: MFMessageComposeViewControllerDelegate {
+    
     func messageComposeViewController(_ controller: MFMessageComposeViewController, didFinishWith result: MessageComposeResult) {
         dismiss(animated: true, completion: nil)
     }

@@ -94,7 +94,7 @@ class ViewController: UIViewController {
     }
     
     // MARK: - ... IBAction
-    @IBAction func buttonPressed(sender button: UIButton) {
+    @IBAction func buttonPressed(sender button: RoundButton) {
         guard let text =  button.titleLabel?.text else { return }
         
         switch text {
