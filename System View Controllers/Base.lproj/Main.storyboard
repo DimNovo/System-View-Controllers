@@ -104,38 +104,43 @@
                                                     <constraint firstAttribute="height" constant="35" id="3M4-Su-S5e"/>
                                                 </constraints>
                                             </stackView>
-                                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JMr-QF-3jV" customClass="RoundButton" customModule="System_View_Controllers" customModuleProvider="target">
-                                                <rect key="frame" x="146.5" y="76" width="82" height="31.5"/>
-                                                <color key="backgroundColor" red="0.2160851946" green="0.34928783499999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="fill" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c3d-8E-kVW" customClass="RoundButton" customModule="System_View_Controllers" customModuleProvider="target">
+                                                <rect key="frame" x="100" y="84" width="175" height="35"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" secondItem="JMr-QF-3jV" secondAttribute="height" multiplier="83:32" id="Jk7-fh-ub8"/>
+                                                    <constraint firstAttribute="width" secondItem="c3d-8E-kVW" secondAttribute="height" multiplier="35:6" constant="-29.166666666666657" id="XZZ-xS-ssq"/>
+                                                    <constraint firstAttribute="height" constant="35" id="zMA-Zu-Zcc"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="italicSystem" pointSize="17"/>
-                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <state key="normal" title=" iMessage "/>
+                                                <state key="normal" title="iMessage">
+                                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                </state>
                                                 <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                        <real key="value" value="8"/>
-                                                    </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="color" keyPath="customBGColor">
                                                         <color key="value" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="8"/>
+                                                    </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
-                                                    <action selector="buttonPressedWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="B40-vE-HPN"/>
+                                                    <action selector="buttonPressedWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RTa-ws-XTH"/>
                                                 </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
+                                            <constraint firstItem="c3d-8E-kVW" firstAttribute="top" secondItem="g7F-cZ-GoS" secondAttribute="bottom" constant="25" id="26U-P2-T5K"/>
                                             <constraint firstItem="g7F-cZ-GoS" firstAttribute="top" secondItem="fZ2-V7-v9O" secondAttribute="topMargin" constant="16" id="Db0-4P-c8M"/>
-                                            <constraint firstItem="JMr-QF-3jV" firstAttribute="centerX" secondItem="g7F-cZ-GoS" secondAttribute="centerX" id="HpK-Yp-KZl"/>
-                                            <constraint firstItem="JMr-QF-3jV" firstAttribute="top" secondItem="g7F-cZ-GoS" secondAttribute="bottom" constant="17" id="pdz-hr-sBm"/>
+                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="c3d-8E-kVW" secondAttribute="trailing" id="eOb-MC-3wC"/>
+                                            <constraint firstItem="c3d-8E-kVW" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="fZ2-V7-v9O" secondAttribute="leading" id="vgi-ss-YYL"/>
                                             <constraint firstItem="g7F-cZ-GoS" firstAttribute="leading" secondItem="fZ2-V7-v9O" secondAttribute="leadingMargin" constant="16" id="wB0-ov-X6Q"/>
-                                            <constraint firstItem="JMr-QF-3jV" firstAttribute="firstBaseline" secondItem="g7F-cZ-GoS" secondAttribute="baseline" constant="42" id="xNi-Mk-zSf"/>
                                             <constraint firstAttribute="trailingMargin" secondItem="g7F-cZ-GoS" secondAttribute="trailing" constant="16" id="yoj-kS-Wvm"/>
                                         </constraints>
                                     </view>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="c3d-8E-kVW" firstAttribute="centerX" secondItem="nhe-M7-IzN" secondAttribute="centerX" id="gxs-Os-BC6"/>
+                                    <constraint firstItem="c3d-8E-kVW" firstAttribute="top" secondItem="nhe-M7-IzN" secondAttribute="bottom" constant="84" id="ykQ-7b-1vq"/>
+                                </constraints>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -153,6 +158,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="53.600000000000001" y="26.53673163418291"/>
         </scene>
     </scenes>
     <resources>

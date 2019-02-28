@@ -26,7 +26,7 @@ class ViewController: UIViewController {
         present(activityController, animated: true, completion: nil)
     }
     
-    func safari(sender: UIButton) {
+    func safari(sender: RoundButton) {
         let url = URL(string: "http://learnswift.ru")!
         
         let safariViewController = SFSafariViewController(url: url)
@@ -34,7 +34,7 @@ class ViewController: UIViewController {
         present(safariViewController, animated: true, completion: nil)
     }
     
-    func camera(sender: UIButton) {
+    func camera(sender: RoundButton) {
         let imagePicker = UIImagePickerController()
         imagePicker.delegate = self
         
@@ -69,7 +69,7 @@ class ViewController: UIViewController {
         
     }
     
-    func email(sender: UIButton) {
+    func email(sender: RoundButton) {
         guard MFMailComposeViewController.canSendMail() else { return }
         
         let mailComposer = MFMailComposeViewController()
@@ -81,12 +81,9 @@ class ViewController: UIViewController {
         present(mailComposer, animated: true, completion: nil)
     }
     
-    func iMessage(sender: UIButton) {
-        guard MFMessageComposeViewController.canSendText(),
-              MFMessageComposeViewController.canSendAttachments(),
-              MFMessageComposeViewController.canSendSubject()
-        else { return }
-        print(#function, "send iMessage" )
+    func iMessage(sender: RoundButton) {
+        guard MFMessageComposeViewController.canSendText() else { return }
+        
         let iMessageComposer = MFMessageComposeViewController()
         iMessageComposer.messageComposeDelegate = self
 
