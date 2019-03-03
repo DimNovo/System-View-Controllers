@@ -69,25 +69,25 @@ class ViewController: UIViewController {
         
     }
     
-    func email(sender: RoundButton) {
-        guard MFMailComposeViewController.canSendMail() else { return }
-        
-        let mailComposer = MFMailComposeViewController()
-        mailComposer.mailComposeDelegate = self
-        mailComposer.setToRecipients(["i1710@icloud.com"])
-        mailComposer.setSubject("This is a test at \(Date())")
-        mailComposer.setMessageBody("Hello! The tigers is hungry!", isHTML: false)
-        
-        present(mailComposer, animated: true, completion: nil)
+    func email(sender: RoundButton)
+    {
+        guard UIApplication.shared.canOpenURL(URL(string:"mailto:")!) else
+        {
+            return
+            
+        }
+        UIApplication.shared.open(URL(string:"mailto:")!, options: [:], completionHandler: nil)
     }
     
-    func iMessage(sender: RoundButton) {
-        guard MFMessageComposeViewController.canSendText() else { return }
-        
-        let iMessageComposer = MFMessageComposeViewController()
-        iMessageComposer.messageComposeDelegate = self
-
-        present(iMessageComposer, animated: true, completion: nil)
+    func iMessage(sender: RoundButton)
+    {
+        guard UIApplication.shared.canOpenURL(URL(string:"sms:")!) else
+        {
+            return
+            
+        }
+                UIApplication.shared.open(URL(string:"sms:")!, options: [:], completionHandler: nil)
+    
     }
     
     // MARK: - ... IBAction

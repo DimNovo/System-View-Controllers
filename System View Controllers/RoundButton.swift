@@ -28,11 +28,14 @@ import UIKit
     }
     
     func refreshColor(_color: UIColor) {
+        
         print("refreshColor(): \(_color)")
+        
         let size: CGSize = CGSize(width: 1, height: 1)
         UIGraphicsBeginImageContextWithOptions(size, true, 0.0)
         _color.setFill()
         UIRectFill(CGRect(x: 0, y: 0, width: size.width, height: size.height))
+        
         let bgImage: UIImage = UIGraphicsGetImageFromCurrentImageContext()!
         UIGraphicsEndImageContext()
         setBackgroundImage(bgImage, for: UIControl.State.normal)
