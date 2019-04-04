@@ -27,7 +27,7 @@ class ViewController: UIViewController {
     }
     
     func safari(sender: RoundButton) {
-        let url = URL(string: "http://learnswift.ru")!
+        let url = URL(string: "https://www.skyscanner.ru/flights/arrivals-departures/tlv/ben-gurion-intl-arrivals-departures")!
         
         let safariViewController = SFSafariViewController(url: url)
         
